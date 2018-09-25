@@ -26,7 +26,7 @@ Today, we'll show you how to build a _full-stack_ application using Spring WebFl
 
 == Reactiveness in Spring WebFlux and React
 
-You hear might hear the term _reactive_ a lot when you read about JavaScript frameworks. When you hear this term in the Java community, it usually refers to asynchronous I/O and non-blocking processes. Spring WebFlux provides an implementation of the reactive streams specification, which standard for asynchronous stream processing with non-blocking back pressure.
+You hear might hear the term _reactive_ a lot when you read about JavaScript frameworks. When you hear this term in the Java community, it usually refers to asynchronous I/O and non-blocking processes. Spring WebFlux provides an implementation of the reactive streams specification, which is a standard for asynchronous stream processing with non-blocking back pressure.
 
 The term "reactive" is a bit different in the JavaScript community. It typically refers to how a UI _reacts_ to events happening in other parts of the app. JavaScript does asynchronous processing by default and this can be very useful on the client so as to prevent the browser from locking up.
 
@@ -595,7 +595,7 @@ image::{% asset_path 'blog/spring-webflux-apis/okta-signup.png' %}[alt=Register 
 
 === Create an OIDC App in Okta
 
-{uri-okta-login}[Log in] to your Okta Developer account and navigate to **Applications** > **Add Application**. Click **Web** and click **Next**. Give the app a name you'll remember, and specify `http://localhost:8080/login/oauth2/code/okta` as a Login redirect URI. Click **Done**, then edit the project and enable "Implicit (Hybrid)" as a grant type (allow ID and access tokens) and click **Save**.
+{uri-okta-login}[Log in] to your Okta Developer account and navigate to **Applications** > **Add Application**. Click **Web** and click **Next**. Give the app a name you'll remember, specify `http://localhost:8080/login/oauth2/code/okta` and `http://localhost:3000` as Login redirect URIs and click **Done**. Then edit the project and enable "Implicit (Hybrid)" as a grant type (allow ID and access tokens) and click **Save**.
 
 Copy and paste the URI of your default authorization server, client ID, and the client secret into `reactive-web/src/main/resources/application.yml`.
 
